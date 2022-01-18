@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/01 Block 1/01 Block 1.iml" filepath="$PROJECT_DIR$/01 Block 1/01 Block 1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/02 Block 2/02 Block 2.iml" filepath="$PROJECT_DIR$/02 Block 2/02 Block 2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/03 Block 3/03 Block 3.iml" filepath="$PROJECT_DIR$/03 Block 3/03 Block 3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/04 Block 4/04 Datentypen/04 Datentypen.iml" filepath="$PROJECT_DIR$/04 Block 4/04 Datentypen/04 Datentypen.iml" />
+      <module fileurl="file://$PROJECT_DIR$/05 Block 5/05 Block 5.iml" filepath="$PROJECT_DIR$/05 Block 5/05 Block 5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/04 Block 4/05 ReferenceTypes/05 ReferenceTypes.iml" filepath="$PROJECT_DIR$/04 Block 4/05 ReferenceTypes/05 ReferenceTypes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/04 Block 4/06 BoxingUnboxing/06 BoxingUnboxing.iml" filepath="$PROJECT_DIR$/04 Block 4/06 BoxingUnboxing/06 BoxingUnboxing.iml" />
+      <module fileurl="file://$PROJECT_DIR$/07 Block 7/07 Block 7.iml" filepath="$PROJECT_DIR$/07 Block 7/07 Block 7.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CsBe-BIS21-Modul403.iml" filepath="$PROJECT_DIR$/CsBe-BIS21-Modul403.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Pythagoras/Pythagoras.iml" filepath="$PROJECT_DIR$/Pythagoras/Pythagoras.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Pythagoras_Prozedural/Pythagoras_Prozedural.iml" filepath="$PROJECT_DIR$/Pythagoras_Prozedural/Pythagoras_Prozedural.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Variable/Variable.iml" filepath="$PROJECT_DIR$/Variable/Variable.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Verweistypen/Verweistypen.iml" filepath="$PROJECT_DIR$/Verweistypen/Verweistypen.iml" />
+    </modules>
+  </component>
+</project>
