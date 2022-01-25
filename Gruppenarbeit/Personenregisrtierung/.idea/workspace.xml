@@ -126,7 +126,7 @@
       <option name="presentableId" value="Default" />
       <updated>1642532444296</updated>
       <workItem from="1642532535151" duration="6760000" />
-      <workItem from="1643130222052" duration="10398000" />
+      <workItem from="1643130222052" duration="13816000" />
     </task>
     <task id="LOCAL-00001" summary="Fist Commit">
       <created>1642536348215</created>
@@ -156,5 +156,15 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Fist Commit" />
     <option name="LAST_COMMIT_MESSAGE" value="Fist Commit" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="2" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

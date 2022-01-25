@@ -17,7 +17,7 @@ public class Main {
     public static String strasse;
     public static String ort;
     public static String plz;
-
+    public static int registeredPersoncounter = 0;
 
     public static void main(String[] args) {
 
@@ -71,12 +71,16 @@ public class Main {
                 System.out.println("Haben sie einen eigenen Haushalt? Wenn ja schreiben sie JA, wenn nein dann geben sie NEIN ein");
 
                 hasitsownHoushold = benutzerEingabe.nextLine();
-                if (hasitsownHoushold.contentEquals("JA"))
+                if (hasitsownHoushold.contentEquals("Nein")) {
+                    newPerson.setHasItsOwnHousehold(false);
+                    continue;
+
+                } else if (hasitsownHoushold.contentEquals("Ja")){
                     newPerson.setHasItsOwnHousehold(true);
 
-                else {
-                    newPerson.setHasItsOwnHousehold(false);
                 }
+
+
 
                 System.out.println("Bitte geben sie den Strassennamen und die Nummer ein");
 
@@ -93,6 +97,10 @@ public class Main {
                 plz = benutzerEingabe.nextLine();
                 newPerson.setPLZ(Integer.parseInt(plz));
 
+
+                registeredPersons[registeredPersoncounter] = newPerson;
+                registeredPersoncounter++;
+
                 continue;
 
 
@@ -102,27 +110,30 @@ public class Main {
 
 
 
-           /* for(int i = 0; i < registeredPersons.length; i++) {
-                System.out.println("Person;" + i + " " + registeredPersons[i].getFirstName() + registeredPersons[i].getLastName());
-            }*/
-
-
+                for(int i = 0; i < registeredPersons.length; i++)
+                    System.out.println(
+                                    registeredPersons[i].getFirstName() + "   "
+                                    + registeredPersons[i].getLastName());
 
             } else if (UserInput == 3) {
 
                 //Array nachnamen und vornamen anzeigen
-                //for(int i = 0; i < registeredPersons.length; i++) {
-                //                System.out.println("Person;" + i + " " + registeredPersons[i].getFirstName() + registeredPersons[i].getLastName());
+
+
+                for(int i = 0; i < registeredPersons.length; i++)
+                    System.out.println( i +
+                                    registeredPersons[i].getFirstName() + "   "
+                                    + registeredPersons[i].getLastName());
 
 
                 //Auswahl anbieten über Index welcher gelöscht werden soll
-               // System.out.println("Bitte geben sie Ihre Auswahl ein um die Person zu löschen");
+                System.out.println("Bitte geben sie Ihre Auswahl ein um die Person zu löschen");
 
-
+                UserInput = Integer.parseInt(benutzerEingabe.nextLine());
 
                 //MIt If/else schlaufe und Userinput ELement löschen
 
-              /* if(UserInput == 0){
+               if(UserInput == 0){
                     registeredPersons[0] = null;
                 }else if (Userinput ==1){
                     registeredPersons[1] = null;
@@ -142,12 +153,22 @@ public class Main {
                     registeredPersons[8] = null;
                 }else if (Userinput ==9){
                     registeredPersons[9] = null;
-                }*/
+                }
 
             } else if (UserInput == 4) {
 
-                System.out.println(Arrays.toString(registeredPersons));
 
+                for(int i = 0; i < registeredPersons.length; i++)
+                System.out.println(
+                        registeredPersons[i].getFirstName() + "   "
+                        + registeredPersons[i].getLastName() + "   "
+                        + registeredPersons[i].getAge() + "   "
+                        + registeredPersons[i].getHasItsOwnHousehold() + "   "
+                        + registeredPersons[i].getStreet() + "   "
+                        + registeredPersons[i].getCity() + "   "
+                        + registeredPersons[i].getPLZ());
+
+                continue;
 
 
             }
