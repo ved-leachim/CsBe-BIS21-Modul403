@@ -34,22 +34,19 @@ public class Main {
                     "#          >    Neue Person registrieren                -->   '1'           #\n"
                     + "#          >    Alle vorhandenen Personen ausgeben      -->   '2'           #\n"
                     + "#          >    Eine Person löschen                     -->   '3'           #\n"
-                    + "#          >    Details aller Personen anzeigen           -->   '4'           #\n"
+                    + "#          >    Details einer Person anzeigen           -->   '4'           #\n"
                     + "#       " +
                     "   >    Personenregistrierung schliessen        -->   '5'           #\n#" +
                     "                                                                           #\n" +
                     "#############################################################################\n\n");
-        do {
+
+            do {
                     System.out.println("Geben Sie Ihre Auswahl ein und bestätigen Sie mit [Enter]:");
 
-
             Scanner benutzerEingabe = new Scanner(System.in);
-
-
             UserInput = Integer.parseInt(benutzerEingabe.nextLine());
 
             if (UserInput == 1) {
-
 
                 Person newPerson = new Person();
 
@@ -73,21 +70,21 @@ public class Main {
                 hasitsownHoushold = benutzerEingabe.nextLine();
                 if (hasitsownHoushold.contentEquals("Nein")) {
                     newPerson.setHasItsOwnHousehold(false);
+
+                    registeredPersons[registeredPersoncounter] = newPerson;
+                    registeredPersoncounter++;
+
                     continue;
 
                 } else if (hasitsownHoushold.contentEquals("Ja")){
-                    newPerson.setHasItsOwnHousehold(true);
-
-                }
-
-
+                    newPerson.setHasItsOwnHousehold(true);}
 
                 System.out.println("Bitte geben sie den Strassennamen und die Nummer ein");
 
                 strasse = benutzerEingabe.nextLine();
                 newPerson.setStreet(strasse);
 
-                System.out.println("Bitte geben sie die Stadt ein");
+                System.out.println("Bitte geben sie den Ort ein");
 
                 ort = benutzerEingabe.nextLine();
                 newPerson.setCity(ort);
@@ -97,7 +94,6 @@ public class Main {
                 plz = benutzerEingabe.nextLine();
                 newPerson.setPLZ(Integer.parseInt(plz));
 
-
                 registeredPersons[registeredPersoncounter] = newPerson;
                 registeredPersoncounter++;
 
@@ -105,10 +101,6 @@ public class Main {
 
 
             } else if (UserInput == 2) {
-
-
-
-
 
                 for(int i = 0; i < registeredPersons.length; i++)
                     System.out.println(
@@ -118,45 +110,41 @@ public class Main {
             } else if (UserInput == 3) {
 
                 //Array nachnamen und vornamen anzeigen
-
-
                 for(int i = 0; i < registeredPersons.length; i++)
-                    System.out.println( i +
+                    System.out.println( i + ":" + "     " +
                                     registeredPersons[i].getFirstName() + "   "
                                     + registeredPersons[i].getLastName());
 
-
                 //Auswahl anbieten über Index welcher gelöscht werden soll
                 System.out.println("Bitte geben sie Ihre Auswahl ein um die Person zu löschen");
-
                 UserInput = Integer.parseInt(benutzerEingabe.nextLine());
 
                 //MIt If/else schlaufe und Userinput ELement löschen
-
                if(UserInput == 0){
                     registeredPersons[0] = null;
-                }else if (Userinput ==1){
+                }else if (UserInput ==1){
                     registeredPersons[1] = null;
-                }else if (Userinput ==2){
+                }else if (UserInput ==2){
                     registeredPersons[2] = null;
-                }else if (Userinput ==3){
+                }else if (UserInput ==3){
                     registeredPersons[3] = null;
-                }else if (Userinput ==4){
+                }else if (UserInput ==4){
                     registeredPersons[4] = null;
-                }else if (Userinput ==5){
+                }else if (UserInput ==5){
                     registeredPersons[5] = null;
-                }else if (Userinput ==6){
+                }else if (UserInput ==6){
                     registeredPersons[6] = null;
-                }else if (Userinput ==7){
+                }else if (UserInput ==7){
                     registeredPersons[7] = null;
-                }else if (Userinput ==8){
+                }else if (UserInput ==8){
                     registeredPersons[8] = null;
-                }else if (Userinput ==9){
-                    registeredPersons[9] = null;
-                }
+                }else if (UserInput ==9){
+                    registeredPersons[9] = null;}
+
+                continue;
+
 
             } else if (UserInput == 4) {
-
 
                 for(int i = 0; i < registeredPersons.length; i++)
                 System.out.println(
@@ -168,18 +156,9 @@ public class Main {
                         + registeredPersons[i].getCity() + "   "
                         + registeredPersons[i].getPLZ());
 
-                continue;
+                continue;}
 
-
-            }
         } while (UserInput != 5);
-
-        // else if (UserInput==5){
-        //System.exit(0);
-        // }else{
-        //System.out.println("Bitte treffen Sie eine Auswahl mit den Zahlen zwischen 1 - 5 ein.");
-
-
     }
-    }
+}
 
