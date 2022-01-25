@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="42197d9b-c239-4d58-afe2-4429f6ed288f" name="Changes" comment="" />
+    <list default="true" id="42197d9b-c239-4d58-afe2-4429f6ed288f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../06 Block 6/M401.1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../06 Block 6/M401.1/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,6 +21,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="23sp2lPrWNcViE7xmvtzseuNdeO" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -115,7 +125,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1642532444296</updated>
-      <workItem from="1642532535151" duration="5642000" />
+      <workItem from="1642532535151" duration="6760000" />
+      <workItem from="1643130222052" duration="10398000" />
     </task>
     <task id="LOCAL-00001" summary="Fist Commit">
       <created>1642536348215</created>
@@ -140,6 +151,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Fist Commit" />
