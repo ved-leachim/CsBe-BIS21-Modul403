@@ -1,4 +1,4 @@
-package Gathering;
+package ch.csbe.Modul403.Codeproject.Gruppe6;
 
     //Constructor (Methoden ohne Rückgabetyp)
     public class Person {
