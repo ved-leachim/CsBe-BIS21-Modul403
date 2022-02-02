@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="7a206b06-d047-4e90-ab8e-27bc4cffb365" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Gathering/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/csbe/Modul403/Codeproject/Gruppe6/Person.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,12 +83,12 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="codeWithMe.voiceChat.enabledByDefault" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Codesnippets/Ali/Main.class" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunManager">
     <configuration name="Gathering" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="ch.csbe.Modul403.Codeproject.Gruppe6.Gathering" />
+      <option name="MAIN_CLASS_NAME" value="ch.csbe.Modul403.Codeproject.Gruppe6.Leon" />
       <module name="untitled104" />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
@@ -129,7 +128,15 @@
       <workItem from="1643178229732" duration="696000" />
       <workItem from="1643179085441" duration="17445000" />
       <workItem from="1643310245064" duration="2600000" />
-      <workItem from="1643312984072" duration="709000" />
+      <workItem from="1643312984072" duration="1975000" />
+      <workItem from="1643395461187" duration="2815000" />
+      <workItem from="1643477133456" duration="3474000" />
+      <workItem from="1643522353850" duration="2119000" />
+      <workItem from="1643524583597" duration="10540000" />
+      <workItem from="1643554734887" duration="621000" />
+      <workItem from="1643652173763" duration="410000" />
+      <workItem from="1643653179901" duration="3424000" />
+      <workItem from="1643656714243" duration="2163000" />
     </task>
     <task id="LOCAL-00001" summary="V1.0 main_source">
       <created>1642613182337</created>
@@ -145,7 +152,14 @@
       <option name="project" value="LOCAL" />
       <updated>1642952307270</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="V1.2 Code snippets">
+      <created>1643313733820</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1643313733820</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -154,6 +168,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="V1.0 main_source" />
     <MESSAGE value="V1.1 main_framework" />
-    <option name="LAST_COMMIT_MESSAGE" value="V1.1 main_framework" />
+    <MESSAGE value="V1.2 Code snippets" />
+    <option name="LAST_COMMIT_MESSAGE" value="V1.2 Code snippets" />
   </component>
 </project>
