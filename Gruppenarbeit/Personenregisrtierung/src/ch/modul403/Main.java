@@ -2,10 +2,6 @@ package ch.modul403;
 
 import java.util.Scanner;
 
-
-
-
-
 public class Main {
 
     public static Person[] registeredPersons = new Person[10];
@@ -18,8 +14,6 @@ public class Main {
     public static String ort;
     public static String plz;
     public static int registeredPersoncounter = 0;
-
-
 
     public static void main(String[] args) {
 
@@ -35,7 +29,7 @@ public class Main {
                 "                   #\n" +
                 "#          >    Neue Person registrieren                -->   '1'           #\n"
                 + "#          >    Alle vorhandenen Personen ausgeben      -->   '2'           #\n"
-                + "#          >    Eine Person löschen                     -->   '3'           #\n"
+                + "#          >    Person/en löschen                     -->   '3'           #\n"
                 + "#          >    Details einer Person anzeigen           -->   '4'           #\n"
                 + "#       " +
                 "   >    Personenregistrierung schliessen        -->   '5'           #\n#" +
@@ -67,7 +61,7 @@ public class Main {
                 alter = benutzerEingabe.nextLine();
                 newPerson.setAge(Integer.parseInt(alter));
 
-                System.out.println("Haben sie einen eigenen Haushalt? Wenn ja schreiben sie JA, wenn nein dann geben sie NEIN ein");
+                System.out.println("Haben sie einen eigenen Haushalt? Wenn ja schreiben sie <Ja>, wenn nein dann schreiben sie <Nein> ein");
 
                 hasitsownHoushold = benutzerEingabe.nextLine();
                 if (hasitsownHoushold.contentEquals("Nein")) {
@@ -80,7 +74,7 @@ public class Main {
 
                 } else if (hasitsownHoushold.contentEquals("Ja")) {
                     newPerson.setHasItsOwnHousehold(true);
-                }
+                    }
 
                 System.out.println("Bitte geben sie den Strassennamen und die Nummer ein");
 
@@ -102,9 +96,7 @@ public class Main {
 
                 continue;
 
-
             } else if (UserInput == 2) {
-
 
 
                 for (int i = 0; i < registeredPersoncounter; i++)
@@ -116,21 +108,20 @@ public class Main {
 
             } else if (UserInput == 3) {
 
-                //Array nachnamen und vornamen anzeigen
                 for (int i = 0; i < registeredPersoncounter; i++)
                     System.out.println(i + ":" + "     " +
                             registeredPersons[i].getFirstName() + "   "
                             + registeredPersons[i].getLastName());
 
-
-                System.out.println("Geben sie 0 ein wenn sie zum Menü zurückkehren wollen.");
+                System.out.println("Geben sie 0 ein, wenn sie zum Menü zurückkehren wollen.");
                 System.out.println("Geben sie 1 ein um die letzte Person die registriert wurde zu löschen");
-                System.out.println("Geben sie 2 ein um die registrierung von vorne zu beginngen (Alle Personen löschen)");
+                System.out.println("Geben sie 2 ein um die Registrierung von Vorne zu beginngen (Alle Personen löschen)");
                 UserInput = Integer.parseInt(benutzerEingabe.nextLine());
 
-
                 if(UserInput == 0) {
+
                     continue;
+
                 } else if (UserInput == 1) {
 
                    if(registeredPersoncounter == 1) {
@@ -171,13 +162,10 @@ public class Main {
                     registeredPersons[0] = null;
                     registeredPersoncounter = 0;
                 }
-
                 continue;
-
 
             } else if (UserInput == 4) {
 
-                //Auswahl anbieten über Index welcher eingesehen werden will
                 for (int i = 0; i < registeredPersoncounter; i++)
                     System.out.println(i + ":" + "     " +
                             registeredPersons[i].getFirstName() + "   "
@@ -185,9 +173,6 @@ public class Main {
                 System.out.println("Bitte geben sie an von welcher Person sie die Details sehen wollen");
 
                 UserInput = Integer.parseInt(benutzerEingabe.nextLine());
-
-
-                //mit if / else schlaufe und INdex auswahl Details anzeigen lassen
 
                 if (UserInput == 0) {
 
@@ -299,12 +284,8 @@ public class Main {
                                     + registeredPersons[9].getCity() + "   "
                                     + registeredPersons[9].getPLZ());
 
-
                 }continue;
             }
-        }
-            while (UserInput != 5) ;
-
-        }
-
+        } while (UserInput != 5);
     }
+}
