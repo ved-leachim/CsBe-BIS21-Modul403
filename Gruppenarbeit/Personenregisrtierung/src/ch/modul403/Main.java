@@ -2,7 +2,7 @@ package ch.modul403;
 
 import java.util.Scanner;
 
-import java.util.Arrays;
+
 
 
 
@@ -18,6 +18,8 @@ public class Main {
     public static String ort;
     public static String plz;
     public static int registeredPersoncounter = 0;
+
+
 
     public static void main(String[] args) {
 
@@ -103,45 +105,71 @@ public class Main {
 
             } else if (UserInput == 2) {
 
-                for (int i = 0; i < registeredPersons.length; i++)
+
+
+                for (int i = 0; i < registeredPersoncounter; i++)
                     System.out.println(
                             registeredPersons[i].getFirstName() + "   "
                                     + registeredPersons[i].getLastName());
 
+                continue;
 
             } else if (UserInput == 3) {
 
                 //Array nachnamen und vornamen anzeigen
-                for (int i = 0; i < registeredPersons.length; i++)
+                for (int i = 0; i < registeredPersoncounter; i++)
                     System.out.println(i + ":" + "     " +
                             registeredPersons[i].getFirstName() + "   "
                             + registeredPersons[i].getLastName());
 
-                //Auswahl anbieten über Index welcher gelöscht werden soll
-                System.out.println("Bitte geben sie Ihre Auswahl ein um die Person zu löschen");
+
+                System.out.println("Geben sie 0 ein wenn sie zum Menü zurückkehren wollen.");
+                System.out.println("Geben sie 1 ein um die letzte Person die registriert wurde zu löschen");
+                System.out.println("Geben sie 2 ein um die registrierung von vorne zu beginngen (Alle Personen löschen)");
                 UserInput = Integer.parseInt(benutzerEingabe.nextLine());
 
-                //MIt If/else schlaufe und Userinput ELement löschen
-                if (UserInput == 0) {
-                    registeredPersons[0] = null;
+
+                if(UserInput == 0) {
+                    continue;
                 } else if (UserInput == 1) {
-                    registeredPersons[1] = null;
-                } else if (UserInput == 2) {
-                    registeredPersons[2] = null;
-                } else if (UserInput == 3) {
-                    registeredPersons[3] = null;
-                } else if (UserInput == 4) {
-                    registeredPersons[4] = null;
-                } else if (UserInput == 5) {
-                    registeredPersons[5] = null;
-                } else if (UserInput == 6) {
-                    registeredPersons[6] = null;
-                } else if (UserInput == 7) {
-                    registeredPersons[7] = null;
-                } else if (UserInput == 8) {
-                    registeredPersons[8] = null;
-                } else if (UserInput == 9) {
-                    registeredPersons[9] = null;
+
+                   if(registeredPersoncounter == 1) {
+                       registeredPersons[0] = null;
+                       registeredPersoncounter --;
+                   }else if (registeredPersoncounter == 2){
+                       registeredPersons[1] = null;
+                       registeredPersoncounter --;
+                    }else if (registeredPersoncounter == 3){
+                       registeredPersons[2] = null;
+                       registeredPersoncounter --;
+                   }else if (registeredPersoncounter == 4){
+                       registeredPersons[3] = null;
+                       registeredPersoncounter --;
+                   }else if (registeredPersoncounter == 5){
+                       registeredPersons[4] = null;
+                       registeredPersoncounter --;
+                   }else if (registeredPersoncounter == 6){
+                       registeredPersons[5] = null;
+                       registeredPersoncounter --;
+                   }else if (registeredPersoncounter == 7){
+                       registeredPersons[6] = null;
+                       registeredPersoncounter --;
+                   }else if (registeredPersoncounter == 8){
+                       registeredPersons[7] = null;
+                       registeredPersoncounter --;
+                   }else if (registeredPersoncounter == 9){
+                       registeredPersons[8] = null;
+                       registeredPersoncounter --;
+                   }else if (registeredPersoncounter == 10){
+                       registeredPersons[9] = null;
+                       registeredPersoncounter --;
+                   }
+                   continue;
+
+                }else if (UserInput == 2){
+
+                    registeredPersons[0] = null;
+                    registeredPersoncounter = 0;
                 }
 
                 continue;
@@ -150,11 +178,13 @@ public class Main {
             } else if (UserInput == 4) {
 
                 //Auswahl anbieten über Index welcher eingesehen werden will
-                for (int i = 0; i < registeredPersons.length; i++)
+                for (int i = 0; i < registeredPersoncounter; i++)
                     System.out.println(i + ":" + "     " +
                             registeredPersons[i].getFirstName() + "   "
                             + registeredPersons[i].getLastName());
                 System.out.println("Bitte geben sie an von welcher Person sie die Details sehen wollen");
+
+                UserInput = Integer.parseInt(benutzerEingabe.nextLine());
 
 
                 //mit if / else schlaufe und INdex auswahl Details anzeigen lassen
