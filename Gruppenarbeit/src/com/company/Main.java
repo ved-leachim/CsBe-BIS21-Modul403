@@ -100,12 +100,12 @@ public class Main {                                                             
             System.out.println("Willkommen in der Person-Ausgabe");
             System.out.println("Suche Bei erste Name:");
             String searchFirstName = scanner.nextLine();
-            int x = 10;
-            for (int i = 0; i < x; i++) {
-                if (registeredPersons[x].getFirstName() == searchFirstName) {
-                    System.out.println(registeredPersons[x].getFirstName() + " " + registeredPersons[x].getLastName() + " " +
-                            registeredPersons[x].getAge() + " " + registeredPersons[x].getHasItsOwnHousehold() + " " +
-                            registeredPersons[x].getStreet() + " " + registeredPersons[x].getCity() + " " + registeredPersons[x].getPLZ());
+            int x = 9;
+            for (int i = 0; i < count; i++) {
+                if (registeredPersons[i].getFirstName() == searchFirstName) {
+                    System.out.println(registeredPersons[i].getFirstName() + " " + registeredPersons[i].getLastName() + " " +
+                            registeredPersons[i].getAge() + " " + registeredPersons[i].getHasItsOwnHousehold() + " " +
+                            registeredPersons[i].getStreet() + " " + registeredPersons[i].getCity() + " " + registeredPersons[i].getPLZ());
                 }
             }
             startProgramm();
