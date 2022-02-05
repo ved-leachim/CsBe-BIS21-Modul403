@@ -7,85 +7,16 @@ public class Main {                                                             
 
     private static final Scanner scanner = new Scanner(System.in);                                                      // initiiert den Scanner namens 'scanner' //
     static int userInput;                                                                                               // speichert eine Variable mit dem Namen 'userInput' //
-    static int countRegisteredPersons;
-    static int i;
-    static int count = 0;
-    public static Person[] registeredPersons = new Person[10];
+    static int countRegisteredPersons;                                                                                  // speichert eine Variable mit dem Namen 'countRegisteredPersons' //
+    static int count = 0;                                                                                               // speichert eine Variable mit dem Namen 'count' und dem dazugehörigen Wert 0 //
+    public static Person[] registeredPersons = new Person[10];                                                          // speichert die Eingaben in der Variable 'registeredPersons' mit dem maximal Wert 10 //
 
-    public static class Person {
-
-        private String firstName;
-        private String lastName;
-        private int age;
-        private boolean hasItsOwnHousehold;
-        private String street;
-        private String city;
-        public int PLZ;
-
-        //Getter Functions
-        public String getFirstName() {
-            return firstName;
-        }
-
-        public String getLastName() {
-            return lastName;
-        }
-
-        public int getAge() {
-            return age;
-        }
-
-        public boolean getHasItsOwnHousehold() {
-            return hasItsOwnHousehold;
-        }
-
-        public String getStreet() {
-            return street;
-        }
-
-        public String getCity() {
-            return city;
-        }
-
-        public int getPLZ() {
-            return PLZ;
-        }
-
-        //Setter Methods
-        public void setFirstName(String firstName) {
-            this.firstName = firstName;
-        }
-
-        public void setLastName(String lastName) {
-            this.lastName = lastName;
-        }
-
-        public void setAge(int age) {
-            this.age = age;
-        }
-
-        public void setHasItsOwnHousehold(boolean hasItsOwnHousehold) {
-            this.hasItsOwnHousehold = hasItsOwnHousehold;
-        }
-
-        public void setStreet(String street) {
-            this.street = street;
-        }
-
-        public void setCity(String city) {
-            this.city = city;
-        }
-
-        public void setPLZ(int PLZ) {
-            this.PLZ = PLZ;
-        }
-
-        public static void main(String[] args) {
-            startProgramm();
-            personRegistrierung();
-            personenAusgabe();
-            personAusgabe();
-            endeProgramm();
+        public static void main(String[] args) {                                                                        // startet das Hauptprogramm 'main' //
+            startProgramm();                                                                                            // initialisiert den Programmabschnitt 'startProgramm' //
+            personRegistrierung();                                                                                      // initialisiert den Programmabschnitt 'personRegistrierung' //
+            personenAusgabe();                                                                                          // initialisiert den Programmabschnitt 'personenAusgabe' //
+            personAusgabe();                                                                                            // initialisiert den Programmabschnitt 'personAusgabe' //
+            endeProgramm();                                                                                             // initialisiert den Programmabschnitt 'endeProgramm' //
         }
 
         public static void startProgramm() {
