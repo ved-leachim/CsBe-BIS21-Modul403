@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7a206b06-d047-4e90-ab8e-27bc4cffb365" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/csbe/Modul403/Codeproject/Gruppe6/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/csbe/Modul403/Codeproject/Gruppe6/Person.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,7 +143,11 @@
       <workItem from="1643805821963" duration="256000" />
       <workItem from="1643909666062" duration="2298000" />
       <workItem from="1643912268435" duration="971000" />
-      <workItem from="1643913322793" duration="865000" />
+      <workItem from="1643913322793" duration="1445000" />
+      <workItem from="1644050167093" duration="4487000" />
+      <workItem from="1644054779853" duration="217000" />
+      <workItem from="1644061582741" duration="441000" />
+      <workItem from="1644088398340" duration="1751000" />
     </task>
     <task id="LOCAL-00001" summary="V1.0 main_source">
       <created>1642613182337</created>
@@ -179,7 +184,14 @@
       <option name="project" value="LOCAL" />
       <updated>1643913112105</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="V1.5 bug fixed">
+      <created>1643914216333</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1643914216333</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -191,6 +203,7 @@
     <MESSAGE value="V1.2 Code snippets" />
     <MESSAGE value="V1.3 control method" />
     <MESSAGE value="V1.4 bug fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="V1.4 bug fixed" />
+    <MESSAGE value="V1.5 bug fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="V1.5 bug fixed" />
   </component>
 </project>

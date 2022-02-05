@@ -1,6 +1,6 @@
 package ch.csbe.Modul403.Codeproject.Gruppe6;
 
-    //Constructor (Methoden ohne Rückgabetyp)
+    //'Konstruktor' *1
     public class Person {
         private String firstName;
         private String lastName;
@@ -10,7 +10,7 @@ package ch.csbe.Modul403.Codeproject.Gruppe6;
         private String city;
         private int PLZ;
 
-        //Getter Functions: Funktionen mit Rückgabe (Person getFirstName, gibt den Vornamen zurück)
+
         public String getFirstName() {return firstName;}
         public String getLastName() {return  lastName;}
         public int getAge() {return age;}
@@ -19,7 +19,7 @@ package ch.csbe.Modul403.Codeproject.Gruppe6;
         public String getCity() {return city;}
         public int getPLZ() {return PLZ;}
 
-        //Setter Methods: Speichert Daten in ein Personenobjekt (Person setFirstName("Wert"))
+
         public void setFirstName(String firstName) {this.firstName = firstName;}
         public void setLastName(String lastName) {this.lastName = lastName;}
         public void setAge(int age) {this.age = age;}
@@ -28,4 +28,3 @@ package ch.csbe.Modul403.Codeproject.Gruppe6;
         public void setCity(String city) {this.city = city;}
         public void setPLZ(int PLZ) {this.PLZ = PLZ;}
     }
-
