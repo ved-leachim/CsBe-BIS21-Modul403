@@ -1,0 +1,31 @@
+package ch.csbe.modul403.groupone;
+
+public class Person {
+    private String firstName;
+    private String lastName;
+    private int age;
+    private boolean hasItsOwnHousehold;
+    private String street;
+    private String city;
+    private int PLZ;
+
+
+    //Getter Functions
+    public String getFirstName() {return firstName;}
+    public String getLastName() {return  lastName;}
+    public int getAge() {return age;} // wird nicht verwendet
+    public boolean getHasItsOwnHousehold() {return hasItsOwnHousehold;}
+    public String getStreet() {return street;} // wird nicht verwendet
+    public String getCity() {return city;} // wird nicht verwendet
+    public int getPLZ() {return PLZ;} // wird nicht verwendet
+
+    //Setter Methods
+    public void setFirstName(String firstName) {this.firstName = firstName;}
+    public void setLastName(String lastName) {this.lastName = lastName;}
+    public void setAge(int age) {this.age = age;}
+    public void setHasItsOwnHousehold(boolean hasItsOwnHousehold) {this.hasItsOwnHousehold = hasItsOwnHousehold;}
+    public void setStreet(String street) {this.street = street;}
+    public void setCity(String city) {this.city = city;}
+    public void setPLZ(int PLZ) {this.PLZ = PLZ;}
+}
+
