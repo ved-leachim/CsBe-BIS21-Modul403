@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/GetterNSetter/GetterNSetter.iml" filepath="$PROJECT_DIR$/GetterNSetter/GetterNSetter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LB403_02_Gruppenprojekt.iml" filepath="$PROJECT_DIR$/LB403_02_Gruppenprojekt.iml" />
+    </modules>
+  </component>
+</project>
