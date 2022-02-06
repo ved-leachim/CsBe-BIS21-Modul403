@@ -57,19 +57,20 @@ public class Main {                                                             
         System.out.println("Haben Sie einen eigenen Haushalt:");
         boolean hasItsOwnHousehold = Boolean.parseBoolean(scanner.nextLine());
         newPerson.setHasItsOwnHousehold(hasItsOwnHousehold);
-        System.out.println("Bitte geben Sie Ihren Wohnort ein:");
-        String city = scanner.nextLine();
-        newPerson.setCity(city);
-        System.out.println("Geben Sie bitte Ihre Strasse ein:");
-        String street = scanner.nextLine();
-        newPerson.setStreet(street);
-        System.out.println("Bitte geben sie die PLZ ihres Wohnorts ein:");
-        int PLZ = Integer.parseInt(scanner.nextLine());
-        newPerson.setPLZ(PLZ);
-
-        System.out.println(newPerson.getFirstName() + " wurde erfolgreich gespeichert.");
-        System.out.println("----------------------------------------------------------");
-
+        if (hasItsOwnHousehold == true) {
+            System.out.println("Bitte geben Sie Ihren Wohnort ein:");
+            String city = scanner.nextLine();
+            newPerson.setCity(city);
+            System.out.println("Geben Sie bitte Ihre Strasse ein:");
+            String street = scanner.nextLine();
+            newPerson.setStreet(street);
+            System.out.println("Bitte geben sie die PLZ ihres Wohnorts ein:");
+            int PLZ = Integer.parseInt(scanner.nextLine());
+            newPerson.setPLZ(PLZ);
+        } else {
+            System.out.println(newPerson.getFirstName() + " wurde erfolgreich gespeichert.");
+            System.out.println("----------------------------------------------------------");
+        }
         registeredPersons[count] = newPerson;
         Arrays.toString(registeredPersons);
         count++;

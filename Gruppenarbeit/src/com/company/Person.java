@@ -26,4 +26,10 @@ public class Person {
     public void setStreet(String street) {this.street = street;}
     public void setCity(String city) {this.city = city;}
     public void setPLZ(int PLZ) {this.PLZ = PLZ;}
+
+    @Override
+    public String toString()
+    {
+        return this.firstName + " " + this.lastName + " " + this.age + " " + this.hasItsOwnHousehold + " " + this.street + " " + this.city + " " + this.PLZ ;
+    }
 }
