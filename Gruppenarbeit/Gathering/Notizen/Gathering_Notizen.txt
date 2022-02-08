@@ -1,0 +1,204 @@
+package ch.csbe.Modul403.Codeproject.Gruppe6;
+
+//Import von Java Bibliotheken
+import java.text.MessageFormat; //Ausgabe wird so weit wie möglich nach hinten geschoben und erst dann erzeugt, wenn die Nachricht dem Benutzer angezeigt werden soll
+import java.util.Scanner; //Lässt Benutzereingaben über die Eingabekonsole zu
+
+//Klasse mit Namen 'Gathering'
+public class Gathering { //Deklarieren der Bezeichner
+    static Scanner userInput; //Datentyp String
+    static int controlInput; //Datentyp Integer (Ganzzahlen)
+    static int counter; //Datentyp Integer (Ganzzahlen)
+    static Person[] registeredPerson; //Datentyp String
+
+    //Hauptmethode vom Programm 'Gathering', wird von oben nach unten abgearbeitet
+    public static void main(String[] args) throws InterruptedException { //Umschalten Unterbrechungsausnahme
+        welcome();
+        startMenu();
+        control();
+        registerNewPerson();
+        showAll();
+        exit();
+        deletePerson();
+    }
+
+    //Begrüssung (1x Ausführung) danach ausführen der beiden Methoden: startMenu/control
+    public static void welcome() throws InterruptedException { //Umschalten Unterbrechungsausnahme
+        System.out.println("=========================================================================");
+        System.out.println("\t\t\t\t\t Willkommen bei Gathering v. 1.0");
+        System.out.println("=========================================================================");
+        Thread.sleep(1000); //Verzögerung um eine Sekunde (Wert in Milisekunden)
+        System.out.println("\t\t\t\t\t Das Hauptmenü wird geladen.");
+        Thread.sleep(1300);
+        System.out.println("\t\t\t\t\t\t\t\t ...");
+        Thread.sleep(800);
+        System.out.println("\t\t\t\t\t\t\t\t ...");
+        Thread.sleep(1000);
+        startMenu();
+        control();
+    }
+
+    //Hauptmenü mit controlInput für Benutzereingaben über die Eingabekonsole
+    public static void startMenu() {
+        System.out.println(" ");
+        System.out.println("-------------------------------------------------------------------------");
+        System.out.println("Bitte steuern Sie das Program wie folgt:");
+        System.out.println("Neue Person registrieren           \t\t\t\t ---> Drücken Sie Taste 1");
+        System.out.println("Alle vorhandenen Personen ausgeben \t\t\t\t ---> Drücken Sie Taste 2");
+        System.out.println("Eine Person löschen                \t\t\t\t ---> Drücken Sie Taste 3");
+        System.out.println("Details einer Person anzeigen      \t\t\t\t ---> Drücken Sie Taste 4");
+        System.out.println("Personregistrierung schliessen     \t\t\t\t ---> Drücken Sie Taste 5");
+        System.out.println("-------------------------------------------------------------------------");
+        System.out.println(" ");
+        System.out.println("Bitte geben Sie eine Zahl von 1 bis 5 ein: ");
+        controlInput = Integer.parseInt(userInput.nextLine()); //Die 'parseInt' Methode liest ein String-Argument ein und gibt eine ganze Zahl im angegebenen Zahlensystem zurück
+    }
+
+    //Switch Case Anweisungen welche Bezeichner beeinhalted die Methoden aufrufen bei der Abarbeitung
+    public static void control() throws InterruptedException { //Umschalten Unterbrechungsausnahme
+        switch (controlInput) {
+            case 1: {
+                registerNewPerson();
+                startMenu();
+                controlInput = Integer.parseInt(userInput.nextLine());
+            }
+
+            case 2: {
+                showAll();
+                startMenu();
+                controlInput = Integer.parseInt(userInput.nextLine());
+            }
+
+            case 3: {
+                deletePerson();
+                startMenu();
+                controlInput = Integer.parseInt(userInput.nextLine());
+            }
+
+            case 4: {
+                allDetails();
+                startMenu();
+                controlInput = Integer.parseInt(userInput.nextLine());
+            }
+
+            case 5: {
+                exit();
+                break; //Beendet das durchgehen von oben nach unten
+            }
+
+            default: { //Wird nur aufgerufen bei Falscheingabe der Zahlenwerte 1-5
+                System.err.println("Ungültige Eingabe. Bitte versuchen Sie es erneut.");
+                controlInput = Integer.parseInt(userInput.nextLine());
+            }
+        }
+    }
+
+    //Lässt Benutzereingaben über die Eingabekonsole zu, es wird jeweils auf eine Eingabe durch den Anwender gewartet...
+    public static void registerNewPerson() throws InterruptedException { //Umschalten Unterbrechungsausnahme
+        if (counter == 10) { //Sofern das Limit von 10 Eingaben nicht erreicht ist, lässt der Block weitere Eingaben zu
+            System.err.println("Sie können keine weiteren Personen erfassen, da die maximale Anzahl erreicht ist.");
+        } else {
+            System.out.println("Bitte geben Sie den Vornamen an:");
+            String firstName = userInput.nextLine();
+            System.out.println("Bitte geben Sie den Namen an:");
+            String lastname = userInput.nextLine();
+            System.out.println("Bitte geben Sie das Alter an:");
+            int age = Integer.parseInt(userInput.nextLine());
+            System.out.println("Bitte geben Sie an, ob die Person einen eigenen Haushalt führt:");
+            System.out.println("(Angabe in Ja / Nein)");
+            String stringHasOwnHousehold = userInput.nextLine();
+            boolean hasOwnHousehold = false;
+            if (stringHasOwnHousehold.contentEquals("Ja") || stringHasOwnHousehold.contentEquals("Wahr")) {
+                hasOwnHousehold = true;
+            }
+
+            //Daten werden durch Konsoleneingabe befüllt 'Person' wurde im 'Konstruktor' erstellt und definiert
+            Person newPerson = new Person();
+            newPerson.setFirstName(fristName);
+            newPerson.setLastName(lastname);
+            newPerson.setAge(age);
+            newPerson.setHasItsOwnHousehold(hasOwnHousehold);
+            if (newPerson.getHasItsOwnHousehold()) { //Wenn die Person einen eigenen Haushalt führt, lässt 'if' weitere Eingaben über die Konsole zu
+                System.out.println("Bitte geben Sie die Adresse an:");
+                newPerson.setStreet(userInput.nextLine());
+                System.out.println("Bitte geben Sie den Wohnort an:");
+                newPerson.setCity(userInput.nextLine());
+                System.out.println("Bitte geben Sie die PLZ an:");
+                newPerson.setPLZ(Integer.parseInt(userInput.nextLine()));
+            }
+
+            // [] Klammern öffnen ein Array, 'counter' innerhalb der Klammern definiert den Wert, in diesem Fall ein String
+            registeredPerson[counter] = newPerson; //das Array wird dem Bezeichner 'newPerson' zugewiesen, counter zählt jedesmal 1 hoch und ist auf 10 Einträge limitiert
+            ++counter; //Zählt hoch bis max. >=10 danach werden keine Eingaben mehr aufgenommen
+            System.out.println(MessageFormat.format("Benutzer {0} {1} wurde erfolgreich erstellt.", newPerson.getFirstName(), newPerson.getLastName()));
+            System.out.println("-------------------------------------------------------------------------");
+            System.out.println(" ");
+            Thread.sleep(650);
+            System.err.println("Drücken Sie Enter, um zurück zum Startmenü zu gelangen.");
+            userInput.nextLine(); //hält das Programm am laufen, da das Programm auf eine Benutzereingabe wartet
+            startMenu();
+            control();
+        }
+    }
+
+    //Bereits erstellte Personen werden jeweils in einer separaten Zeile ausgegeben
+    public static void showAll() throws InterruptedException { //Umschalten Unterbrechungsausnahme
+        int count = 1; //Startpunkt ist die Ganzzahl 1
+        for (Person reg : registeredPerson) { //Bedingungsoperator('Bedingung' : ''), 'Person' wird in 'reg' zugewiesen. 'registeredPerson' beinhaltet die bereits erfassten Personendaten
+            if (reg != null) { //Wenn 'reg' ungleich 'null' ist wird die Ausgabezeile fortgeführt (1 - max. 10)
+                System.out.println(count++ + ". Eintrag: " + reg.getFirstName() + " " + reg.getLastName()); // 'count++' zählt jeweils um 1 hoch
+                System.out.println("-------------------------------------------------------------------------");
+            }
+        }
+        Thread.sleep(650);
+        System.err.println("Drücken Sie Enter, um zurück zum Startmenü zu gelangen.");
+        userInput.nextLine();
+        startMenu();
+        control();
+    }
+
+    public static void deletePerson() throws InterruptedException { //Umschalten Unterbrechungsausnahme
+        System.out.println("N/A");
+        Thread.sleep(650);
+        System.err.println("Drücken Sie Enter, um zurück zum Startmenü zu gelangen.");
+        userInput.nextLine();
+        startMenu();
+        control();
+    }
+
+    //Ausgaben weiterer Details zu Personen auf dem Prinzip der Vorschleife "Bedingungsoperator" der 'showAll' Methode
+    public static void allDetails() throws InterruptedException { //Umschalten Unterbrechungsausnahme
+        int count = 1; //Startpunkt ist die Ganzzahl 1
+        for (Person reg : registeredPerson) { //Bedingungsoperator ':', 'Person' wird in 'reg' zugewiesen. 'registeredPerson' beinhaltet die bereits erfassten Personendaten
+            if (reg != null) { //Wenn 'reg' ungleich 'null' ist wird die Ausgabezeile fortgeführt (1 - max. 10)
+                System.out.println(count++ + ". Eintrag: " + reg.getFirstName() + " " + reg.getLastName() + " " + reg.getAge() + " " + reg.getHasItsOwnHousehold() + " " + reg.getStreet() + " " + reg.getCity() + " " + reg.getPLZ());
+                System.out.println("-------------------------------------------------------------------------");
+            }
+        }
+        Thread.sleep(650);
+        System.err.println("Drücken Sie Enter, um zurück zum Startmenü zu gelangen.");
+        userInput.nextLine();
+        startMenu();
+        control();
+    }
+
+    //Abbruch Methode welche das Programm beendet, welches sonst mithilfe der 'userInput.nextLine' am laufen gehalten wird
+    public static void exit() {
+        System.err.println("Gathering wird geschlossen.");
+        System.exit(0);
+    }
+
+    //initialisieren von 'userInput' zu Scanner Eingabe / 'registeredPerson' Limit 10 Einträge
+    static {
+        userInput = new Scanner(System.in);
+        registeredPerson = new Person[10];
+    }
+}
+
+//Sichtbarkeitsoperator:
+//public:   öffentlich, für alle anderen Klassen sichtbar
+//private:  geschlossen Methoden welche nur innerhalb der Klasse sichtbar sein sollen
+
+//Getter & Setter können trotz privat gesetzter Klassen darauf zugreifen / verändern
+//Getter Funktionen: Funktionen mit Rückgabe 'Person getFirstName' gibt den Vornamen zurück (zugreifen auf Wert)
+//Setter Funktionen: Speichert Daten in ein Personenobjekt 'Person setFirstName' (verändern vom Wert)
